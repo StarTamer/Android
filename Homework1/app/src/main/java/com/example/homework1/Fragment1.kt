@@ -10,27 +10,11 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.homework1.databinding.Fragment1Binding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_COUNTER = "counter"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Fragment1.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Fragment1 : Fragment() {
 
     private var counter: Int = 0
     private var color: Int = 0
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,7 +28,7 @@ class Fragment1 : Fragment() {
 
 
         btn1.setOnClickListener{
-            var ft: FragmentTransaction? = fragmentManager?.beginTransaction()
+            val ft: FragmentTransaction? = fragmentManager?.beginTransaction()
             ft?.replace(R.id.fragmentContainerView, fragment2)?.addToBackStack(null)
             ft?.commit()
         }
@@ -64,14 +48,4 @@ class Fragment1 : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_1, container, false)
     }
-
-//    companion object {
-//        fun newInstance() =
-//            Fragment1().apply {
-//                arguments = Bundle().apply {
-//                    putInt("data", counter)
-//
-//                }
-//            }
-//    }
 }
