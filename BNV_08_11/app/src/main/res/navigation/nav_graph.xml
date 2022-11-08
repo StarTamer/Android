@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.bnv_08_11.screens.FragmentA"
+        android:label="FragmentA" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB"
+            app:popUpTo="@navigation/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentC"
+            app:destination="@id/fragmentC"
+            app:popUpTo="@navigation/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentA2"
+            app:destination="@id/fragmentA2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.example.bnv_08_11.screens.FragmentB"
+        android:label="FragmentB" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentB2"
+            app:destination="@id/fragmentB2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.example.bnv_08_11.screens.FragmentC"
+        android:label="FragmentC" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentС2"
+            app:destination="@id/fragmentС2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB2"
+        android:name="com.example.bnv_08_11.screens.FragmentB2"
+        android:label="FragmentB2" />
+    <fragment
+        android:id="@+id/fragmentA2"
+        android:name="com.example.bnv_08_11.screens.FragmentA2"
+        android:label="FragmentA2" >
+        <action
+            app:popUpTo="@id/fragmentA3"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_fragmentA2_to_fragmentA3"
+            app:destination="@id/fragmentA3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentA3"
+        android:name="com.example.bnv_08_11.screens.FragmentA3"
+        android:label="FragmentA3" />
+    <fragment
+        android:id="@+id/fragmentС2"
+        android:name="com.example.bnv_08_11.screens.FragmentС2"
+        android:label="FragmentС2" >
+        <action
+            android:id="@+id/action_fragmentС2_to_fragmentС3"
+            app:destination="@id/fragmentС3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentС3"
+        android:name="com.example.bnv_08_11.screens.FragmentС3"
+        android:label="FragmentС3" />
+</navigation>
